@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+hello() {
+  echo "Hello!"
+  now
+}
+
+hello
+
+now() {
+  echo "It is $(date +%r)"
+}

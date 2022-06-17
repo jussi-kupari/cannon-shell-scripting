@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+# This is a startup script for sleep-walking-server
+
+case "S1" in
+  start)
+    /tmp/sleep-walking-server &
+    ;;
+  stop)
+    kill $(cat /tmp/sleep-walking-sever.pid)
+    ;;
+  *)
+    echo "Usage:$0 start|stop"
+    exit 1
+esac

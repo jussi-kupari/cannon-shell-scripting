@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+file_count() {
+ls -l $PWD | wc -l
+}
+
+echo "The number of files in $PWD is:"
+file_count

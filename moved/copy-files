@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+DIR=~/projects/cannon-shell-scripting/testfiles
+echo "Destination dir: $DIR"
+
+cd $DIR
+
+FILES=$(ls) 
+
+for file in $FILES
+do
+  echo "Copying $file as ${file}-backup"
+  cp $file $file-backup
+done

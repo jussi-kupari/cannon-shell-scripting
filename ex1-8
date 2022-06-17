@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+
+# Modify the previous script to accept an unlimited number of files and
+# directories as arguments.
+# Hint: You'll want to use a special variable.
+
+FILES=$@
+
+for FILE in $FILES
+do
+if [ -f "$FILE" ]
+then
+  echo "File exists and is a regular file."
+elif [ -d "$FILE" ]
+then
+  echo "File exists and is a directory."
+else
+  echo "File does not exist."
+fi
+
+ls -l $FILE
+done

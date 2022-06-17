@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+
+cd ~/projects/cannon-shell-scripting
+mkdir ./moved
+cp -r *file* ./moved
+

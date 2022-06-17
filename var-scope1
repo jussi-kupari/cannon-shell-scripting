@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+# If we look at this snippet of a shell script, you'll see that the variable,
+# GLOBAL_VAR , is defined before
+# the function is called. In this case, the value of GLOBAL_VAR can be accessed
+# in the function.
+
+GLOBAL_VAR=1
+
+my_function() {
+echo $GLOBAL_VAR
+}
+
+my_function

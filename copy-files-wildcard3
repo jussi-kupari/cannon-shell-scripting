@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+# Create directory if it does not exists
+[ -d ~/projects/cannon-shell-scripting/moved ] || mkdir ~/projects/cannon-shell-scripting/moved
+
+# Copy files to directory
+for FILE in ~/projects/cannon-shell-scripting/*file*
+do
+  echo "Copying $FILE"
+  cp -r $FILE ~/projects/cannon-shell-scripting/moved
+done

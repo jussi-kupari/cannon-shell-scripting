@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+# Here is an example of the opposite. Since the variable, GLOBAL_VAR , is
+# defined after the function is
+# called, it is not available in the function.
+
+my_function() {
+echo $GLOBAL_VAR
+}
+
+my_function
+
+GLOBAL_VAR=1

@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+cd ~/projects/cannon-shell-scripting
+mkdir ./moved
+
+for FILE in *file*
+do
+  echo "Copying $FILE"
+  cp -r $FILE ./moved
+done
+

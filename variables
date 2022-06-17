@@ -1,0 +1,23 @@
+#!/usr/bin/bash
+
+MY_SHELL="bash"
+
+# This works
+echo "I like the $MY_SHELL shell."
+
+# This also works
+echo "I like the ${MY_SHELL} shell."
+
+# Curly braces are a must if you follow the variable with text
+echo "I am ${MY_SHELL}ing on my keyboard."
+
+# This doesn't work
+echo "I am $MY_SHELLing on my keyboard."
+
+# Assign output from a command to a variable
+SERVER_NAME=$(hostname)
+echo "You are running the script on ${SERVER_NAME}"
+
+# You can also use backticks to enclose the command in a variable, this is older syntax
+SREVER_NAME=`hostname`
+echo "You are running the script on ${SERVER_NAME}"

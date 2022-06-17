@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+hello() {
+
+NAMES=$@
+
+for NAME in $NAMES
+do
+  echo "Hello ${NAME}!"
+done
+
+}
+
+hello John James Jane Joan Josh

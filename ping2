@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+HOST=$1
+
+ping -c 1 $HOST
+
+if [ "$?" -ne 0 ]
+then
+  echo "$HOST unreachable"
+fi

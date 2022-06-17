@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+
+# If a global variable is defined in a function, it is not available outside
+# that function until the function is
+# called and executed. At the top of the next script, the my_function function
+# is declared. It hasn't been
+# executed yet. If we attempt to use the variable defined within the function
+# without calling it first, the
+# value of the variable will be empty. In this example, the first echo
+# statement will simply print a blank
+# line.
+# Next, the my_function function is called. Now a value has been assigned to
+# the variable named
+# GLOBAL_VAR . On the echo statement after the function call, it will print
+# "1" because that is the value
+# now assigned to GLOBAL_VAR .
+
+my_function() {
+GLOBAL_VAR=1
+}
+
+# GLOBAL_VAR not available yet.
+echo $GLOBAL_VAR
+
+my_function
+
+# GLOBAL_VAR is NOW available.
+echo $GLOBAL_VAR
